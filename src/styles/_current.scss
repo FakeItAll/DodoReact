@@ -1,0 +1,17 @@
+$orange: #ff6900;
+
+$theme-colors: (
+        "orange": $orange
+);
+
+$colors: (
+        "orange": $orange
+);
+
+.text-orange {
+  color: $orange;
+}
+
+.btn-outline-orange {
+  @include button-outline-variant($orange, #222222, lighten($orange, 5%), $orange);
+}
