@@ -1,8 +1,9 @@
-import React from 'react'
+import React, {useEffect, useContext} from 'react'
+import {SectionsContext} from '../context/sections/sectionsContext'
 import Sections from "../components/sections";
 
 const Main = () => {
-    const sections = [
+    const _sections = [
         {
             id: 'pizza',
             anchor: 'pizza',
@@ -69,6 +70,12 @@ const Main = () => {
             ]
         },
     ];
+    const {sections, fetchSections} = useContext(SectionsContext);
+
+    useEffect(() => {
+        fetchSections()
+    }, []);
+
     return (
         <Sections sections={sections}/>
     );

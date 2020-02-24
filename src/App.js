@@ -1,9 +1,12 @@
 import React from 'react';
 import Main from './pages/main';
+import {SectionsState} from './context/sections/sectionsState'
 
 const App = () => {
     return (
-        <Main />
+        <SectionsState>
+            <Main />
+        </SectionsState>
     )
 };
 
